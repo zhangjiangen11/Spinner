@@ -15,4 +15,4 @@ config/icon="res://addons/tattomoosa.spinner/icons/Spinner.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/explore-editor-theme/plugin.cfg", "res://addons/tattomoosa.spinner/plugin.cfg")
+enabled=PackedStringArray("res://addons/tattomoosa.spinner/plugin.cfg")
