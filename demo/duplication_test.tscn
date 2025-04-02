@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dm787obh5b8nt"]
 
-[ext_resource type="Script" path="res://addons/tattomoosa.spinner/spinner.gd" id="1_m4soy"]
+[ext_resource type="Script" uid="uid://daxfjew482siq" path="res://addons/tattomoosa.spinner/spinner.gd" id="1_m4soy"]
 [ext_resource type="Texture2D" uid="uid://d0dp465r86yka" path="res://promo/icon.png" id="2_6d571"]
 
 [node name="Control" type="Control"]
