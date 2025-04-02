@@ -37,7 +37,7 @@ enum Status {
 @export_range(0.0, 0.3, 0.001) var border_width : float = 0.1:
 	set(value):
 		border_width = value
-		_progress_border.stroke_width = diameter * border_width
+		_update_children_size()
 
 @export_subgroup("Spin", "spin_")
 ## Percent filled by the border when the spinner is spinning
@@ -194,7 +194,7 @@ func _update_children_size():
 	_icon.icon_scale = icon_scale
 	_icon.radius = radius
 	_progress_border.radius = radius
-	_progress_border.stroke_width = border_width * radius
+	_progress_border.stroke_width = border_width * diameter
 
 func _process(delta: float):
 	if status == Status.SPINNING and (!Engine.is_editor_hint() or spin_preview_in_editor):
@@ -290,7 +290,7 @@ class _SpinnerProgressBorder extends _SpinnerElement:
 		set(value):
 			end_angle = value
 			queue_redraw()
-
+	
 	func _draw():
 		draw_arc(
 			Vector2(radius, radius),
