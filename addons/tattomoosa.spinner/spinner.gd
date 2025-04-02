@@ -132,18 +132,12 @@ func _ready():
 	add_child(_background, false, INTERNAL_MODE_FRONT)
 	add_child(_icon, false, INTERNAL_MODE_FRONT)
 	add_child(_progress_border, false, INTERNAL_MODE_FRONT)
-	_update_mouse_filter()
 	_update_children_size()
 
 	value_changed.connect(queue_redraw.unbind(1))
 	# resized.connect(_update_children_size)
 	item_rect_changed.connect(_update_children_size)
 	_update_status()
-
-func _update_mouse_filter():
-	_background.mouse_filter = self.mouse_filter
-	_icon.mouse_filter = self.mouse_filter
-	_progress_border.mouse_filter = self.mouse_filter
 
 func _update_status():
 	_background.color = color_background
@@ -257,6 +251,7 @@ class _SpinnerElement extends Control:
 			queue_redraw()
 	func _init():
 		set_anchors_preset(PRESET_CENTER)
+		mouse_filter = MOUSE_FILTER_IGNORE
 
 class _SpinnerSolidCircle extends _SpinnerElement:
 	func _draw():
