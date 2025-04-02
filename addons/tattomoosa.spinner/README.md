@@ -26,6 +26,8 @@
 	<br/>
 </div>
 
+> Compatible with Godot 4.4 - use 4.3 branch for Godot 4.3 compatibility
+
 Adds new Range control Spinner, an all-purpose process indicator.
 Use to provide feedback on ongoing processes - threads, network requests, timers, etc.
 
@@ -117,3 +119,4 @@ Let me know if there's interest!
 ## My Other Godot Plugins
 
 * [VisionCone3D](https://github.com/Tattomoosa/VisionCone3D)
+* [NetworkTextureRect](https://github.com/Tattomoosa/NetworkTextureRect)
